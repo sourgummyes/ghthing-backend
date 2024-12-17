@@ -47,6 +47,7 @@ def create_song():
 @songs_blueprint.route('/songs/<song_id>', methods=['PUT'])
 @token_required
 def update_song(song_id):
+
     try:
         updated_song_data = request.json
         connection = get_db_connection()
