@@ -10,6 +10,8 @@ python-dotenv = "*"
 pyjwt = "*"
 bcrypt = "*"
 psycopg2-binary = "*"
+flask-cors = "*"
+gunicorn = "*"
 
 [dev-packages]
 

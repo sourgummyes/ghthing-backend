@@ -10,6 +10,7 @@ import os
 import jwt
 import bcrypt
 import psycopg2, psycopg2.extras
+from flask_cors import CORS
 
 from auth_blueprint import authentication_blueprint
 from songs_blueprint import songs_blueprint
@@ -19,6 +20,7 @@ load_dotenv()
 # Initialize Flask
 # We'll use the pre-defined global '__name__' variable to tell Flask where it is.
 app = Flask(__name__)
+CORS(app)
 app.register_blueprint(authentication_blueprint)
 app.register_blueprint(songs_blueprint)
 
